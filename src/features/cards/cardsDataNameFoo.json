@@ -1,0 +1,83 @@
+{
+  "cards": [
+    {
+      "name": "Back-Alley Footpad",
+      "rarity": "Common",
+      "type": "Creature",
+      "subtypes": [
+        "Dark Elf"
+      ],
+      "cost": 0,
+      "power": 1,
+      "health": 1,
+      "set": {
+        "id": "aw",
+        "name": "Alliance War",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/aw"
+      },
+      "collectible": true,
+      "soulSummon": 50,
+      "soulTrap": 5,
+      "text": "Summon: Give a creature Cover.",
+      "attributes": [
+        "Agility"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/aw/back-alley_footpad.png",
+      "id": "3191ef47c29536a6fbc08b831a1a694570117d60"
+    },
+    {
+      "name": "Helstrom Footpad",
+      "rarity": "Common",
+      "type": "Creature",
+      "subtypes": [
+        "Argonian"
+      ],
+      "cost": 2,
+      "power": 3,
+      "health": 2,
+      "set": {
+        "id": "cs",
+        "name": "Core Set",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/cs"
+      },
+      "collectible": true,
+      "soulSummon": 50,
+      "soulTrap": 5,
+      "attributes": [
+        "Agility"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/cs/helstrom_footpad.png",
+      "id": "a947e73e475056a6d35ccf523392befee522fa33"
+    },
+    {
+      "name": "Thieves Guild Shadowfoot",
+      "rarity": "Rare",
+      "type": "Creature",
+      "subtypes": [
+        "Khajiit"
+      ],
+      "cost": 3,
+      "power": 2,
+      "health": 2,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 100,
+      "soulTrap": 20,
+      "text": "Summon: Steal the top card of the opponent's deck and replace it with a Counterfeit Trinket.",
+      "attributes": [
+        "Willpower"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/thieves_guild_shadowfoot.png",
+      "id": "41b47822afc0aec0e5f3c0fd710574d81066c043"
+    }
+  ],
+  "_pageSize": 20,
+  "_totalCount": 3
+}

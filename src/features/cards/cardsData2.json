@@ -1,0 +1,552 @@
+{
+  "cards": [
+    {
+      "name": "Sightless Skulk",
+      "rarity": "Common",
+      "type": "Creature",
+      "subtypes": [
+        "Falmer"
+      ],
+      "cost": 4,
+      "power": 4,
+      "health": 3,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 50,
+      "soulTrap": 5,
+      "text": "Summon: Draw a card if you have two other (agility) creatures.",
+      "attributes": [
+        "Agility"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/sightless_skulk.png",
+      "id": "c230e52b99e10acdaa8210d836bee60456a03092"
+    },
+    {
+      "name": "Stormcloak Avenger",
+      "rarity": "Epic",
+      "type": "Creature",
+      "subtypes": [
+        "Nord"
+      ],
+      "cost": 4,
+      "power": 4,
+      "health": 4,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 400,
+      "soulTrap": 100,
+      "text": "At the end of your turn, if three or more friendly creatures died this turn, summon a 2/2 Rallying Stormcloak.",
+      "attributes": [
+        "Strength"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/stormcloak_avenger.png",
+      "id": "f0e6768dddb45792a387de3eb69ddc5d5ecb12c1"
+    },
+    {
+      "name": "Stormcloak Battalion",
+      "rarity": "Common",
+      "type": "Creature",
+      "subtypes": [
+        "Nord"
+      ],
+      "cost": 4,
+      "power": 5,
+      "health": 5,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": false,
+      "attributes": [
+        "Strength"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/stormcloak_battalion.png",
+      "id": "1901fe0c721f4e9f61adaf6270254a7beb9d8fb0"
+    },
+    {
+      "name": "Ulfric's Zealot",
+      "rarity": "Common",
+      "type": "Creature",
+      "subtypes": [
+        "Nord"
+      ],
+      "cost": 4,
+      "power": 5,
+      "health": 2,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 50,
+      "soulTrap": 5,
+      "text": "Last Gasp: Put a Heavy Battleaxe into your hand.",
+      "attributes": [
+        "Strength"
+      ],
+      "keywords": [
+        "Last Gasp"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/ulfrics_zealot.png",
+      "id": "562440f9a4ceed7f2d213fa9cd75e6b0e956ea26"
+    },
+    {
+      "name": "Barbas",
+      "rarity": "Legendary",
+      "type": "Creature",
+      "subtypes": [
+        "Daedra",
+        "Beast"
+      ],
+      "cost": 5,
+      "power": 3,
+      "health": 3,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 1200,
+      "soulTrap": 400,
+      "text": "Summon: Choose one: -Stay: Gains +1/+1 and Guard. Fetch: Put a random Daedra into your hand. Roll Over: Gains Charge.",
+      "attributes": [
+        "Neutral"
+      ],
+      "unique": true,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/barbas.png",
+      "id": "7c8e08acfb7d417044e27fa97a3567cc30f32d48"
+    },
+    {
+      "name": "Battlefield Scrounger",
+      "rarity": "Rare",
+      "type": "Creature",
+      "subtypes": [
+        "Redguard"
+      ],
+      "cost": 5,
+      "power": 3,
+      "health": 3,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 100,
+      "soulTrap": 20,
+      "text": "Charge. Slay: Put a random item into your hand.",
+      "attributes": [
+        "Strength"
+      ],
+      "keywords": [
+        "Charge",
+        "Slay"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/battlefield_scrounger.png",
+      "id": "e2f4743ecd7799bf76b7ad5e8a249b8e4b619e79"
+    },
+    {
+      "name": "Brynjolf",
+      "rarity": "Legendary",
+      "type": "Creature",
+      "subtypes": [
+        "Nord"
+      ],
+      "cost": 5,
+      "power": 4,
+      "health": 5,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 1200,
+      "soulTrap": 400,
+      "text": "Drain, When a friendly creature Pilfers or Drain, gain +1 magicka this turn.",
+      "attributes": [
+        "Agility"
+      ],
+      "keywords": [
+        "Drain",
+        "Pilfer"
+      ],
+      "unique": true,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/brynjolf.png",
+      "id": "42299da08ed0f5a170bbf57512b7d196b5630535"
+    },
+    {
+      "name": "Revered Guardian",
+      "rarity": "Common",
+      "type": "Creature",
+      "subtypes": [
+        "Dragon"
+      ],
+      "cost": 4,
+      "power": 4,
+      "health": 4,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 50,
+      "soulTrap": 5,
+      "text": "Guard",
+      "attributes": [
+        "Willpower"
+      ],
+      "keywords": [
+        "Guard"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/revered_guardian.png",
+      "id": "e389f0cee1c76d66adc53dab029224a511f733f3"
+    },
+    {
+      "name": "Serpentine Stalker",
+      "rarity": "Legendary",
+      "type": "Creature",
+      "subtypes": [
+        "Dragon"
+      ],
+      "cost": 4,
+      "power": 4,
+      "health": 4,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 1200,
+      "soulTrap": 400,
+      "text": "Slay: +2/+0. May move to attack creatures in the other lane.",
+      "attributes": [
+        "Agility"
+      ],
+      "keywords": [
+        "Slay"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/serpentine_stalker.png",
+      "id": "66780fce9d6852c1a4eef92857aec8f20118a55c"
+    },
+    {
+      "name": "Swims-at-Night",
+      "rarity": "Legendary",
+      "type": "Creature",
+      "subtypes": [
+        "Argonian"
+      ],
+      "cost": 4,
+      "power": 2,
+      "health": 2,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 1200,
+      "soulTrap": 400,
+      "text": "Summon: Put a random 0-cost card into your hand. After you play a 0-cost card, Swims-at-Night gains +1/+1.",
+      "attributes": [
+        "Agility"
+      ],
+      "unique": true,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/swims-at-night.png",
+      "id": "18caa8b415f23fd5b151cf82b74f505f671b3415"
+    },
+    {
+      "name": "Court Wizard",
+      "rarity": "Common",
+      "type": "Creature",
+      "subtypes": [
+        "Breton"
+      ],
+      "cost": 5,
+      "power": 3,
+      "health": 5,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 50,
+      "soulTrap": 5,
+      "text": "Summon: Draw a card if you have two other  creatures.",
+      "attributes": [
+        "Intelligence"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/court_wizard.png",
+      "id": "c0de6f6787a6f3490dab8e84992def9e7b754aee"
+    },
+    {
+      "name": "Hulking Draugr",
+      "rarity": "Common",
+      "type": "Creature",
+      "subtypes": [
+        "Skeleton"
+      ],
+      "cost": 5,
+      "power": 5,
+      "health": 5,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": false,
+      "attributes": [
+        "Endurance"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/hulking_draugr.png",
+      "id": "b29d6c29c17bf02733738d33b3de1043a0de289d"
+    },
+    {
+      "name": "Insightful Scholar",
+      "rarity": "Rare",
+      "type": "Creature",
+      "subtypes": [
+        "High Elf"
+      ],
+      "cost": 5,
+      "power": 2,
+      "health": 3,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 100,
+      "soulTrap": 20,
+      "text": "Prophecy. Summon: Draw a card for each card your opponent drew this turn.",
+      "attributes": [
+        "Intelligence"
+      ],
+      "keywords": [
+        "Prophecy"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/insightful_scholar.png",
+      "id": "4d50d646a0822d625d304952f1204e94634060d4"
+    },
+    {
+      "name": "Karthspire Scourge",
+      "rarity": "Rare",
+      "type": "Creature",
+      "subtypes": [
+        "Dragon"
+      ],
+      "cost": 5,
+      "power": 4,
+      "health": 4,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 100,
+      "soulTrap": 20,
+      "text": "Summon: Give all enemy creatures in this lane -1/-0.",
+      "attributes": [
+        "Willpower"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/karthspire_scourge.png",
+      "id": "91aa65f60755ccefb38922a808f6223a528670b8"
+    },
+    {
+      "name": "Lydia",
+      "rarity": "Legendary",
+      "type": "Creature",
+      "subtypes": [
+        "Nord"
+      ],
+      "cost": 5,
+      "power": 3,
+      "health": 8,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 1200,
+      "soulTrap": 400,
+      "text": "Guard. Lydia guards both lanes.",
+      "attributes": [
+        "Willpower"
+      ],
+      "keywords": [
+        "Guard"
+      ],
+      "unique": true,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/lydia.png",
+      "id": "25b72160c5991ce8283ea9d326c500c793359a4a"
+    },
+    {
+      "name": "Prized Chicken",
+      "rarity": "Epic",
+      "type": "Creature",
+      "subtypes": [
+        "Beast"
+      ],
+      "cost": 5,
+      "power": 0,
+      "health": 1,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 400,
+      "soulTrap": 100,
+      "text": "Last Gasp: Fill this lane with 1/1 Angry Villagers.",
+      "attributes": [
+        "Neutral"
+      ],
+      "keywords": [
+        "Last Gasp"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/prized_chicken.png",
+      "id": "4176515cea1b75cbcbcb1d3ce02a7d2f616f08cb"
+    },
+    {
+      "name": "Snowhawk detachment",
+      "rarity": "Common",
+      "type": "Creature",
+      "subtypes": [
+        "Imperial"
+      ],
+      "cost": 5,
+      "power": 3,
+      "health": 5,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 50,
+      "soulTrap": 5,
+      "text": "Guard. Summon: +1/+1 if you have another creature with Guard.",
+      "attributes": [
+        "Willpower"
+      ],
+      "keywords": [
+        "Guard"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/snowhawk_detachment.png",
+      "id": "5caaa2a0a392fce9ce49451ce856798e34136387"
+    },
+    {
+      "name": "Stoutheart Giant",
+      "rarity": "Common",
+      "type": "Creature",
+      "subtypes": [
+        "Giant"
+      ],
+      "cost": 5,
+      "power": 6,
+      "health": 4,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 50,
+      "soulTrap": 5,
+      "attributes": [
+        "Strength"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/stoutheart_giant.png",
+      "id": "2cf353edf241ffafe7a20efa3a3b3544d70e761e"
+    },
+    {
+      "name": "Thief of Dreams",
+      "rarity": "Epic",
+      "type": "Creature",
+      "subtypes": [
+        "Khajiit"
+      ],
+      "cost": 5,
+      "power": 4,
+      "health": 4,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 400,
+      "soulTrap": 100,
+      "text": "Summon: See a vision of two of your opponent's cards. Guess which one is in their hand. If you're right, draw a copy of it.",
+      "attributes": [
+        "Intelligence"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/thief_of_dreams.png",
+      "id": "79d13bad4d0ef4232c43b9b6e401a1a31e7cbb4d"
+    },
+    {
+      "name": "Cave Bear",
+      "rarity": "Common",
+      "type": "Creature",
+      "subtypes": [
+        "Beast"
+      ],
+      "cost": 5,
+      "power": 5,
+      "health": 6,
+      "set": {
+        "id": "hos",
+        "name": "Heroes of Skyrim",
+        "_self": "https://api.elderscrollslegends.io/v1/sets/hos"
+      },
+      "collectible": true,
+      "soulSummon": 50,
+      "soulTrap": 5,
+      "attributes": [
+        "Endurance"
+      ],
+      "unique": false,
+      "imageUrl": "https://images.elderscrollslegends.io/hos/cave_bear.png",
+      "id": "4ce2dcfb9559e5bfee37bfb72bac55d45c95e7a8"
+    }
+  ],
+  "_links": {
+    "next": "https://api.elderscrollslegends.io/v1/cards?page=3&pageSize=20",
+    "prev": "https://api.elderscrollslegends.io/v1/cards?pageSize=20"
+  },
+  "_pageSize": 20,
+  "_totalCount": 40
+}

@@ -1,0 +1,15 @@
+.searchName {
+  margin: 10px 10px 10px auto;
+  border: 2px solid #999;
+  border-radius: 20px;
+  padding: 6px 3px 6px 34px;
+  font-size: 16px;
+  line-height: 1.4;
+  outline: none;
+  background: #fff url('./search.svg') 6px center no-repeat;
+  background-size: 24px;
+  color: #777;
+}
+.searchName:read-only {
+  color: #bbb;
+}
