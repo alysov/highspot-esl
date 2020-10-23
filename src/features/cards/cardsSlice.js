@@ -8,7 +8,8 @@ export const initialState = {
   page: 1,
   total: Infinity,
   error: null,
-  searchName: ''
+  searchName: '',
+  favorites: {}
 };
 
 const url = 'https://api.elderscrollslegends.io/v1/cards';
@@ -65,6 +66,12 @@ export const cardsSlice = createSlice({
       state.page = initialState.page;
       state.total = initialState.total;
       state.searchName = action.payload;
+    },
+    favoriteCard: (state, action) => {
+      state.favorites[action.payload.id] = action.payload;
+    },
+    unfavoriteCard: (state, action) => {
+      delete state.favorites[action.payload.id];
     }
   },
   extraReducers: {
@@ -85,11 +92,15 @@ export const cardsSlice = createSlice({
   }
 });
 
+export const { favoriteCard, unfavoriteCard } = cardsSlice.actions;
+
 // selectors
 
 export const getSearchName = state => state[SLICE_NAME].searchName;
 export const getCards = state => state[SLICE_NAME].cards;
 export const hasMoreCards = state => state[SLICE_NAME].total > state[SLICE_NAME].cards.length;
 export const isLoading = state => state[SLICE_NAME].loading;
+export const isFavorite = (state, id) => !!state[SLICE_NAME].favorites[id];
+export const getFavorites = state => Object.values(state[SLICE_NAME].favorites)
 
 export default cardsSlice.reducer;

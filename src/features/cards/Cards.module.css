@@ -1,9 +1,15 @@
 .card {
   box-sizing: border-box;
+  border-radius: 10px;
   min-width: 300px;
   position: relative;
   text-align: center;
   overflow: hidden;
+  cursor: pointer;
+  transition: background-color .1s ease-in-out;
+}
+.favorite {
+  background: gold;
 }
 .cardLoader {
   box-sizing: border-box;
