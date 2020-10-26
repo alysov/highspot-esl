@@ -39,6 +39,7 @@ const App = () => {
         hasChildren={!!cards.length && !isFetching}
         loader={<div className='loadingMsg'>Loading&hellip;</div>}
         scrollThreshold='700px'  // avg. height of a card + a bit more
+        initialScrollY={0}
       >
         <Cards cards={cards} loading={cardsLoading} />
       </InfiniteScroll>

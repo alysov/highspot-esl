@@ -18,7 +18,7 @@ const PAGE_SIZE = 20;
 export const fetchCards = createAsyncThunk(
   `${SLICE_NAME}/fetch`,
   async (_, { getState }) => {
-    const { page, /* loading, */ searchName } = getState()[SLICE_NAME];
+    const { page, searchName } = getState()[SLICE_NAME];
     // TODO?: reject call if one is already in flight (loading==true)
 
     // Could probably use something like `qs` here if query gets any more complex than this.
@@ -30,6 +30,12 @@ export const fetchCards = createAsyncThunk(
     // await new Promise(resolve => setTimeout(resolve, 1000));
     
     return json;
+  },
+  {
+    condition: (_, { getState }) => {
+      const { loading } = getState()[SLICE_NAME];
+      return !loading;
+    }
   }
 );
 
@@ -101,6 +107,6 @@ export const getCards = state => state[SLICE_NAME].cards;
 export const hasMoreCards = state => state[SLICE_NAME].total > state[SLICE_NAME].cards.length;
 export const isLoading = state => state[SLICE_NAME].loading;
 export const isFavorite = (state, id) => !!state[SLICE_NAME].favorites[id];
-export const getFavorites = state => Object.values(state[SLICE_NAME].favorites)
+export const getFavorites = state => Object.values(state[SLICE_NAME].favorites);
 
 export default cardsSlice.reducer;

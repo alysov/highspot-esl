@@ -6,6 +6,9 @@ import reducer, {
   fetchCards,
   getSearchName,
   setSearchName,
+  favoriteCard,
+  unfavoriteCard,
+  isFavorite,
   cardsSlice,
   initialState
 } from './cardsSlice';
@@ -268,4 +271,120 @@ describe('#setSearchName action', () => {
 
     expect(dispatch).not.toHaveBeenCalled();
   });
+});
+
+test('nonexistent card is not a favorite', () => {
+  const favorite = isFavorite(getState(), mockData.cards[0].id);
+  expect(favorite).toBe(false);
+});
+test('detects favorite card', () => {
+  const card = mockData.cards[0];
+  const prep = {
+    favorites: {
+      [card.id]: card
+    }
+  };
+  const favorite = isFavorite(getState(prep), card.id);
+  expect(favorite).toBe(true);
+});
+
+test('#favoriteCard action marks a card as a favorite', () => {
+  const card = mockData.cards[0];
+  const prep = {
+    [SLICE_NAME]: {
+      ...initialState,
+      cards: mockData.cards,
+      total: mockData._totalCount
+    }
+  };
+  const store = makeStore(prep);
+  var state = store.getState();
+  expect(isFavorite(state, card.id)).toBe(false);
+
+  store.dispatch(favoriteCard(card));
+  state = store.getState();
+
+  expect(isFavorite(state, card.id)).toBe(true);
+});
+test('#favoriteCard action does nothing different for a card that is already a favorite', () => {
+  const card = mockData.cards[0];
+  const prep = {
+    [SLICE_NAME]: {
+      ...initialState,
+      cards: mockData.cards,
+      total: mockData._totalCount,
+      favorites: {
+        [card.id]: card
+      }
+    }
+  };
+  const store = makeStore(prep);
+  var state = store.getState();
+  expect(isFavorite(state, card.id)).toBe(true);
+
+  store.dispatch(favoriteCard(card));
+  state = store.getState();
+
+  expect(isFavorite(state, card.id)).toBe(true);
+});
+test('#unfavoriteCard action unmarks an existing favorite card', () => {
+  const card = mockData.cards[0];
+  const prep = {
+    [SLICE_NAME]: {
+      ...initialState,
+      cards: mockData.cards,
+      total: mockData._totalCount,
+      favorites: {
+        [card.id]: card
+      }
+    }
+  };
+  const store = makeStore(prep);
+  var state = store.getState();
+  expect(isFavorite(state, card.id)).toBe(true);
+
+  store.dispatch(unfavoriteCard(card));
+  state = store.getState();
+
+  expect(isFavorite(state, card.id)).toBe(false);
+});
+test('#unfavoriteCard action does nothing different for a card that is not a favorite', () => {
+  const card = mockData.cards[0];
+  const prep = {
+    [SLICE_NAME]: {
+      ...initialState,
+      cards: mockData.cards,
+      total: mockData._totalCount
+    }
+  };
+  const store = makeStore(prep);
+  var state = store.getState();
+  expect(isFavorite(state, card.id)).toBe(false);
+
+  store.dispatch(unfavoriteCard(card));
+  state = store.getState();
+
+  expect(isFavorite(state, card.id)).toBe(false);
+});
+test('replacing the cards does not affect favorites', () => {
+  const card = mockData.cards[0];
+  const prep = {
+    [SLICE_NAME]: {
+      ...initialState,
+      cards: mockData.cards,
+      total: mockData._totalCount,
+      favorites: {
+        [card.id]: card
+      }
+    }
+  };
+  const store = makeStore(prep);
+  var state = store.getState();
+  expect(isFavorite(state, card.id)).toBe(true);
+
+  // replace cards with those searched by name "foo"
+  store.dispatch(fetchCards.fulfilled(mockDataNameFoo));
+  state = store.getState();
+
+  expect(isFavorite(state, card.id)).toBe(true);
 });
