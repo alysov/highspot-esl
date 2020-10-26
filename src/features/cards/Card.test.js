@@ -1,6 +1,15 @@
 import React from 'react';
-import { queries, render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import makeStore from '../../app/store';
+import {
+  SLICE_NAME,
+  favoriteCard,
+  unfavoriteCard,
+  isFavorite
+} from './cardsSlice';
 import Card from './Card';
+import styles from './Cards.module.css';
 
 const card = {
   "name": "Raise Dead",
@@ -47,16 +56,22 @@ const card2 = {
   "id": "ebbd44e57df2df1c46f7eaeb7e7847d3c1b2ed46"
 };
 
+const store = makeStore();
+
 it('includes card name', () => {
   const { getByText } = render(
-    <Card card={card} />
+    <Provider store={store}>
+      <Card card={card} />
+    </Provider>
   );
 
   expect(getByText(card.name)).toBeInTheDocument();
 });
 it('includes card image', () => {
   const { getByAltText } = render(
-    <Card card={card} />
+    <Provider store={store}>
+      <Card card={card} />
+    </Provider>
   );
   const img = getByAltText(card.name);
 
@@ -65,7 +80,9 @@ it('includes card image', () => {
 });
 it('includes card set name', () => {
   const { getByText } = render(
-    <Card card={card} />
+    <Provider store={store}>
+      <Card card={card} />
+    </Provider>
   );
 
   expect(getByText(card.set.name)).toBeInTheDocument();
@@ -75,7 +92,9 @@ it('prefers card subtype over type', () => {
   // The latter is more descriptive, so we prefer that for display.
   // It also matches what card shows in its image.
   const { getByText, queryByText } = render(
-    <Card card={card2} />
+    <Provider store={store}>
+      <Card card={card2} />
+    </Provider>
   );
 
   expect(getByText(card2.subtypes[0])).toBeInTheDocument();
@@ -84,15 +103,74 @@ it('prefers card subtype over type', () => {
 it('shows card type when no subtype is present', () => {
   // This card has no subtype and type of "Action".
   const { getByText } = render(
-    <Card card={card} />
+    <Provider store={store}>
+      <Card card={card} />
+    </Provider>
   );
 
   expect(getByText(card.type)).toBeInTheDocument();
 });
 it('includes card text', () => {
   const { getByText } = render(
-    <Card card={card} />
+    <Provider store={store}>
+      <Card card={card} />
+    </Provider>
   );
 
   expect(getByText(card.text)).toBeInTheDocument();
+});
+it('is not marked as a favorite (via className) by default', () => {
+  const { container } = render(
+    <Provider store={store}>
+      <Card card={card} />
+    </Provider>
+  );
+
+  expect(container.firstChild).not.toHaveClass(styles.favorite);
+});
+it('is marked as a favorite (via className) if the card is a favorite', () => {
+  store.dispatch(favoriteCard(card));
+
+  const { container } = render(
+    <Provider store={store}>
+      <Card card={card} />
+    </Provider>
+  );
+
+  expect(container.firstChild).toHaveClass(styles.favorite);
+});
+it('toggles a card as a favorite on click', () => {
+  // need to use a local copy of the store to avoid polluting state
+  const store = makeStore();
+  const dispatch = jest.spyOn(store, 'dispatch');
+  const { container } = render(
+    <Provider store={store}>
+      <Card card={card} />
+    </Provider>
+  );
+
+  fireEvent.click(container.firstChild);
+
+  expect(dispatch).toHaveBeenCalledWith(favoriteCard(card));
+});
+it('unfavorites a favorite card on click', () => {
+  const prep = {
+    [SLICE_NAME]: {
+      favorites: {
+        [card.id]: card
+      }
+    }
+  };
+  // need to use a local copy of the store to avoid polluting state
+  const store = makeStore(prep);
+  const dispatch = jest.spyOn(store, 'dispatch');
+  const { container } = render(
+    <Provider store={store}>
+      <Card card={card} />
+    </Provider>
+  );
+
+  fireEvent.click(container.firstChild);
+
+  expect(dispatch).toHaveBeenCalledWith(unfavoriteCard(card));
 });

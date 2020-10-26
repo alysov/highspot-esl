@@ -5,7 +5,7 @@ import {
   isFavorite,
   favoriteCard,
   unfavoriteCard
-} from '../../features/cards/cardsSlice';
+} from './cardsSlice';
 import styles from './Cards.module.css';
 
 const Card = ({ card }) => {
